@@ -21,7 +21,7 @@
 | 1    | weapp response | fail    |
 | 0    | weapp response | success |
 
-## usage:
+## migrate:
 ```js
 import NxWeappInteraction from 'next-weapp-interaction';
 
@@ -37,4 +37,17 @@ const WeappInteraction = nx.declare({
 });
 
 export default WeappInteraction.getInstance();
+```
+
+## usage:
+```js
+nx.wx.actions(/*options*/)
+nx.wx.alert(/*options*/)
+nx.wx.confirm(/*options*/)
+nx.wx.modal(true,/*options*/)
+nx.wx.modal(false,/*options*/)
+nx.wx.loading(true,/*options*/)
+nx.wx.loading(false,/*options*/)
+nx.wx.toast(true,/*options*/)
+nx.wx.toast(false,/*options*/)
 ```
