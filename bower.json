@@ -1,0 +1,27 @@
+{
+  "name": "next-weapp-interaction",
+  "version": "0.0.1",
+  "description": "Weapp interaction like modal/actionsheet/toast/loading",
+  "main": "dist/next-weapp-interaction.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-weapp-interaction",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "build",
+    "gulpfile.js"
+  ]
+}
