@@ -13,6 +13,14 @@
 | loading | showLoading/hideLoading | 显示 loading 提示框 | value,options |
 | toast   | showToast/hideToast     | 显示消息提示框      | value,options |
 
+## response:
+> A promise instance.
+
+| code | data           | status  |
+|------|----------------|---------|
+| 1    | weapp response | fail    |
+| 0    | weapp response | success |
+
 ## usage:
 ```js
 import NxWeappInteraction from 'next-weapp-interaction';
