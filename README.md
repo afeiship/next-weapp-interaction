@@ -1,7 +1,7 @@
 # next-weapp-interaction
 > Weapp interaction like modal/actionsheet/toast/loading
 
-## apis:
+## request:
 - https://developers.weixin.qq.com/miniprogram/dev/api/wx.showActionSheet.html
 
 | api     | wx                      | description         | wx            |
