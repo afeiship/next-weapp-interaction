@@ -17,28 +17,28 @@
       }
     },
     methods: {
-      actions(inOptions) {
+      actions: function(inOptions) {
         return NxWeappActionsheet.present(inOptions);
       },
-      alert(inOptions) {
+      alert: function(inOptions) {
         return NxWeappModal.alert(inOptions);
       },
-      confirm(inOptions) {
+      confirm: function(inOptions) {
         return NxWeappModal.confirm(inOptions);
       },
-      modal(inValue, inOptions) {
+      modal: function(inValue, inOptions) {
         if (inValue) {
           return NxWeappModal.present(inOptions);
         }
         return NxWeappModal.dismiss();
       },
-      loading(inValue, inOptions) {
+      loading: function(inValue, inOptions) {
         if (inValue) {
           return NxWeappLoading.present(inOptions);
         }
         return NxWeappLoading.dismiss(inOptions);
       },
-      toast(inValue, inOptions) {
+      toast: function(inValue, inOptions) {
         if (inValue) {
           return NxWeappToast.present(inOptions);
         }
