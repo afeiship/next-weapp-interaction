@@ -30,7 +30,7 @@ const WeappInteraction = nx.declare({
   methods: {
     init() {
       ['actions', 'alert', 'confirm', 'modal', 'loading', 'toast'].forEach((item) => {
-        nx.set(nx, `wx.${item}`, this[item]);
+        nx.set(nx, `wii.${item}`, this[item]);
       });
     }
   }
@@ -41,13 +41,13 @@ export default WeappInteraction.getInstance();
 
 ## usage:
 ```js
-nx.wx.actions(/*options*/)
-nx.wx.alert(/*options*/)
-nx.wx.confirm(/*options*/)
-nx.wx.modal(true,/*options*/)
-nx.wx.modal(false,/*options*/)
-nx.wx.loading(true,/*options*/)
-nx.wx.loading(false,/*options*/)
-nx.wx.toast(true,/*options*/)
-nx.wx.toast(false,/*options*/)
+nx.wii.actions(/*options*/)
+nx.wii.alert(/*options*/)
+nx.wii.confirm(/*options*/)
+nx.wii.modal(true,/*options*/)
+nx.wii.modal(false,/*options*/)
+nx.wii.loading(true,/*options*/)
+nx.wii.loading(false,/*options*/)
+nx.wii.toast(true,/*options*/)
+nx.wii.toast(false,/*options*/)
 ```
