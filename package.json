@@ -1,6 +1,6 @@
 {
   "name": "next-weapp-interaction",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Weapp interaction like modal/actionsheet/toast/loading",
   "homepage": "https://github.com/afeiship/next-weapp-interaction",
   "author": {
