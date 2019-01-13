@@ -6,7 +6,7 @@
   var NxWeappModal = nx.WeappModal || require('next-weapp-modal');
   var NxWeappToast = nx.WeappToast || require('next-weapp-toast');
   var nxStubSingleton = nx.stubSingleton || require('next-stub-singleton');
-  var NxComponent = {
+  var NxWeappComponent = {
     actions: NxWeappActionsheet,
     alert: NxWeappModal,
     confirm: NxWeappModal,
@@ -20,12 +20,12 @@
     methods: {
       'actions,alert,confirm': function(inName) {
         return function(inOptions) {
-          return NxWeappModal[inName](inOptions);
+          return NxWeappComponent[inName](inOptions);
         };
       },
       'modal,loading,toast': function(inName) {
         return function(inValue, inOptions) {
-          var component = NxComponent[inName];
+          var component = NxWeappComponent[inName];
           if (inValue) {
             return component.present(inOptions);
           }
