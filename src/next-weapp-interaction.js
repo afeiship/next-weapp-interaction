@@ -13,7 +13,7 @@
   };
 
   var NxWeappInteraction = nx.declare('nx.WeappInteraction', {
-    statics: nxStubSingleton,
+    statics: nxStubSingleton(),
     methods: {
       actions: function(inOptions) {
         return NxWeappActionsheet.present(inOptions);
