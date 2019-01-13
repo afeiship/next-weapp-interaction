@@ -5,6 +5,11 @@
   var NxWeappLoading = nx.WeappLoading || require('next-weapp-loading');
   var NxWeappModal = nx.WeappModal || require('next-weapp-modal');
   var NxWeappToast = nx.WeappToast || require('next-weapp-toast');
+  var NxComponent = {
+    loading: NxWeappLoading,
+    modal: NxWeappModal,
+    toast: NxWeappToast
+  };
 
   var NxWeappInteraction = nx.declare('nx.WeappInteraction', {
     statics: {
@@ -26,23 +31,14 @@
       confirm: function(inOptions) {
         return NxWeappModal.confirm(inOptions);
       },
-      modal: function(inValue, inOptions) {
-        if (inValue) {
-          return NxWeappModal.present(inOptions);
-        }
-        return NxWeappModal.dismiss();
-      },
-      loading: function(inValue, inOptions) {
-        if (inValue) {
-          return NxWeappLoading.present(inOptions);
-        }
-        return NxWeappLoading.dismiss(inOptions);
-      },
-      toast: function(inValue, inOptions) {
-        if (inValue) {
-          return NxWeappToast.present(inOptions);
-        }
-        return NxWeappToast.dismiss(inOptions);
+      'modal,loading,toast': function(inName) {
+        return function(inValue, inOptions) {
+          var component = NxComponent[inName];
+          if (inValue) {
+            return component.present(inOptions);
+          }
+          return component.dismiss();
+        };
       }
     }
   });
