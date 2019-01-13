@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "next-js-core2": "github:afeiship/next-js-core2",
+    "next-stub-singleton": "github:afeiship/next-stub-singleton",
     "next-weapp-actionsheet": "github:afeiship/next-weapp-actionsheet",
     "next-weapp-loading": "github:afeiship/next-weapp-loading",
     "next-weapp-modal": "github:afeiship/next-weapp-modal",

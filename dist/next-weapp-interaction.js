@@ -5,6 +5,7 @@
   var NxWeappLoading = nx.WeappLoading || require('next-weapp-loading');
   var NxWeappModal = nx.WeappModal || require('next-weapp-modal');
   var NxWeappToast = nx.WeappToast || require('next-weapp-toast');
+  var nxStubSingleton = nx.stubSingleton || require('next-stub-singleton');
   var NxComponent = {
     loading: NxWeappLoading,
     modal: NxWeappModal,
@@ -12,15 +13,7 @@
   };
 
   var NxWeappInteraction = nx.declare('nx.WeappInteraction', {
-    statics: {
-      instance: null,
-      getInstance: function() {
-        if (!this.instance) {
-          this.instance = new this();
-        }
-        return this.instance;
-      }
-    },
+    statics: nxStubSingleton,
     methods: {
       actions: function(inOptions) {
         return NxWeappActionsheet.present(inOptions);
