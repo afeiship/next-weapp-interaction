@@ -7,6 +7,9 @@
   var NxWeappToast = nx.WeappToast || require('next-weapp-toast');
   var nxStubSingleton = nx.stubSingleton || require('next-stub-singleton');
   var NxComponent = {
+    actions: NxWeappActionsheet,
+    alert: NxWeappModal,
+    confirm: NxWeappModal,
     loading: NxWeappLoading,
     modal: NxWeappModal,
     toast: NxWeappToast
@@ -15,14 +18,10 @@
   var NxWeappInteraction = nx.declare('nx.WeappInteraction', {
     statics: nxStubSingleton(),
     methods: {
-      actions: function(inOptions) {
-        return NxWeappActionsheet.present(inOptions);
-      },
-      alert: function(inOptions) {
-        return NxWeappModal.alert(inOptions);
-      },
-      confirm: function(inOptions) {
-        return NxWeappModal.confirm(inOptions);
+      'actions,alert,confirm': function(inName) {
+        return function(inOptions) {
+          return NxWeappModal[inName](inOptions);
+        };
       },
       'modal,loading,toast': function(inName) {
         return function(inValue, inOptions) {
