@@ -20,7 +20,7 @@
     methods: {
       'actions,alert,confirm': function(inName) {
         return function(inOptions) {
-          return NxWeappComponent[inName](inOptions);
+          return NxWeappComponent[inName].present(inOptions);
         };
       },
       'modal,loading,toast': function(inName) {
